@@ -1,0 +1,10 @@
+<ng-container *ngIf="collection.length > 0; else empty">
+    <ng-content></ng-content>
+</ng-container>
+<ng-template #empty>
+    <div class="h-full w-full flex flex-col justify-center items-center">
+        <h6 class="font-semibold">
+            {{emptyMessage}}
+        </h6>
+    </div>
+</ng-template>
