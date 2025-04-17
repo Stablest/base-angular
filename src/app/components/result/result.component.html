@@ -1,0 +1,10 @@
+<ng-container [ngSwitch]="result">
+    <ng-container *ngSwitchCase="'pending'">
+        <ng-content select="[pending]"></ng-content>
+        <div class="flex flex-1 justify-center items-center">
+            Loading...
+        </div>
+    </ng-container>
+    <ng-content *ngSwitchCase="'success'" select="[success]"></ng-content>
+    <ng-content *ngSwitchCase="'error'" select="[error]"></ng-content>
+</ng-container>
