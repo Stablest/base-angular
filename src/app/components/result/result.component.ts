@@ -1,6 +1,6 @@
 import { CommonModule } from "@angular/common";
-import { Component, ContentChild, Input, OnChanges, OnInit } from "@angular/core";
-import { Observable } from "rxjs";
+import { Component, ContentChild, Input, OnChanges, OnDestroy, OnInit } from "@angular/core";
+import { Observable, Subscription } from "rxjs";
 import { Result } from "./interfaces/result.interface";
 import { PendingDirective } from "./directives/pending.directive";
 
@@ -10,10 +10,11 @@ import { PendingDirective } from "./directives/pending.directive";
     standalone: true,
     imports: [CommonModule],
 })
-export class ResultComponent implements OnInit, OnChanges {
+export class ResultComponent implements OnInit, OnChanges, OnDestroy {
     @ContentChild(PendingDirective) pendingContent?: PendingDirective
     @Input() observable?: Observable<unknown>
     result: Result = 'pending'
+    subscription?: Subscription;
 
     ngOnInit() {
         this.updateInternals()
@@ -23,9 +24,14 @@ export class ResultComponent implements OnInit, OnChanges {
         this.updateInternals()
     }
 
+    ngOnDestroy() {
+        this.subscription?.unsubscribe()
+    }
+
     updateInternals() {
         this.result = 'pending';
-        this.observable?.subscribe(
+        this.subscription?.unsubscribe();
+        this.subscription = this.observable?.subscribe(
             {
                 next: () => {
                     this.result = 'success'
