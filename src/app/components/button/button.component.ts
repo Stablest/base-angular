@@ -25,7 +25,9 @@ export class ButtonComponent {
     }
 
     ngOnChanges(changes: SimpleChanges) {
-        this.loadVariant();
+        if (changes['variant']) {
+            this.loadVariant();
+        }
         if (changes['observable']) {
             this.subscription?.unsubscribe();
             this.subscribeToObservable();
