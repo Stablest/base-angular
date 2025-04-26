@@ -1,7 +1,7 @@
 <ng-container [ngSwitch]="result">
     <ng-container *ngSwitchCase="'pending'">
         <ng-content select="[pending]"></ng-content>
-        <div class="flex flex-1 justify-center items-center">
+        <div *ngIf="!pendingContent" class="flex flex-1 justify-center items-center">
             <img src="icons/loading.svg" alt="Loading" width="128" height="128" class="w-32 h-32" />
         </div>
     </ng-container>

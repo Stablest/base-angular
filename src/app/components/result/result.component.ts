@@ -1,4 +1,3 @@
-import { CommonModule } from "@angular/common";
 import { Component, ContentChild, Input, OnChanges, OnDestroy, OnInit } from "@angular/core";
 import { Observable, Subscription } from "rxjs";
 import { Result } from "./interfaces/result.interface";
@@ -7,8 +6,6 @@ import { PendingDirective } from "./directives/pending.directive";
 @Component({
     selector: 'app-result',
     templateUrl: './result.component.html',
-    standalone: true,
-    imports: [CommonModule],
 })
 export class ResultComponent implements OnInit, OnChanges, OnDestroy {
     @ContentChild(PendingDirective) pendingContent?: PendingDirective
