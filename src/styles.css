@@ -4,7 +4,21 @@
 
 :root {
   --color-primary: #3b82f6;
+  --color-secondary: #64748b;
+  --color-tertiary: #ef4444;
+
+  --color-primary-hover: #2563eb;
+  --color-secondary-hover: #475569;
+  --color-tertiary-hover: #dc2626;
+
+  --color-primary-focus: #3b82f6;
+  --color-secondary-focus: #6b7280;
+  --color-tertiary-focus: #ef4444;
+
   --color-background: #ffffff;
+  --color-background-alt: #f9fafb;
+  --color-background-light: #f3f4f6;
+
   --color-text: #1f2937;
   --color-card: #f3f4f6;
   --color-input-border: #d1d5db;
