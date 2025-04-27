@@ -1,4 +1,4 @@
-import { Component, ElementRef, HostListener, Input, Optional, Renderer2, SimpleChanges } from "@angular/core";
+import { Component, ElementRef, HostListener, Input, OnChanges, Optional, Renderer2, SimpleChanges } from "@angular/core";
 import { NgControl } from "@angular/forms";
 
 @Component({
@@ -7,7 +7,7 @@ import { NgControl } from "@angular/forms";
     styleUrls: ["./input.component.css"],
     standalone: true,
 })
-export class InputDefaultDirective {
+export class InputDefaultComponent implements OnChanges {
     @Input() isInvalid: boolean | null = null;
 
     constructor(private el: ElementRef, private renderer: Renderer2, @Optional() private control: NgControl | null) { }
