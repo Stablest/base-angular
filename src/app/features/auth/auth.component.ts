@@ -1,14 +1,14 @@
 import { CommonModule } from "@angular/common";
 import { Component } from "@angular/core";
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from "@angular/forms";
-import { ButtonDefaultDirective } from "../../directives/defaults/button/button.directive";
+import { ButtonDefaultComponent } from "../../directives/defaults/button/button.component";
 import { InputDefaultDirective } from "../../directives/defaults/input/input.directive";
 
 @Component({
     selector: "app-auth",
     templateUrl: "./auth.component.html",
     standalone: true,
-    imports: [CommonModule, ReactiveFormsModule, ButtonDefaultDirective, InputDefaultDirective],
+    imports: [CommonModule, ReactiveFormsModule, ButtonDefaultComponent, InputDefaultDirective],
 })
 export class AuthComponent {
     form: FormGroup;

@@ -1,0 +1,54 @@
+:host {
+  height: fit-content;
+  width: auto;
+  white-space: nowrap;
+  padding: 0.25rem 1rem;
+  text-align: center;
+  font-weight: 600;
+  border: 1px solid;
+  border-radius: 0.25rem;
+  color: white;
+}
+
+:host:focus {
+  outline-offset: 2px;
+}
+
+:host(.primary) {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+:host(.primary):hover {
+  background-color: var(--color-primary-hover);
+}
+
+:host(.primary):focus {
+  outline: 2px solid var(--color-primary-focus);
+}
+
+:host(.secondary) {
+  background-color: var(--color-secondary);
+  border-color: var(--color-secondary);
+}
+
+:host(.secondary):hover {
+  background-color: var(--color-secondary-hover);
+}
+
+:host(.secondary):focus {
+  outline: 2px solid var(--color-secondary-focus);
+}
+
+:host(.tertiary) {
+  background-color: var(--color-tertiary);
+  border-color: var(--color-tertiary);
+}
+
+:host(.tertiary):hover {
+  background-color: var(--color-tertiary-hover);
+}
+
+:host(.tertiary):focus {
+  outline: 2px solid var(--color-tertiary-focus);
+}
