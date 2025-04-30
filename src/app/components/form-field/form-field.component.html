@@ -1,0 +1,5 @@
+<ng-content select="label"></ng-content>
+<ng-content select="[app-input]"></ng-content>
+<small *ngIf="input?.isInvalid" class="text-error text-xs h-4">
+    {{ input?.control?.errors | errorMessage}}
+</small>
