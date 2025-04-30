@@ -1,10 +1,10 @@
 import { CommonModule } from "@angular/common";
 import { Component } from "@angular/core";
 import { FormBuilder, FormGroup, ReactiveFormsModule } from "@angular/forms";
-import { ButtonDefaultComponent } from "../../../defaults/button/button.component";
 import { InputDefaultComponent } from "../../../components/input/input.directive";
 import { ValidatorsMessage } from "../../../components/form-field/error/validators-message";
 import { FormFieldComponent } from "../../../components/form-field/form-field.component";
+import { ButtonDefaultComponent } from "../../../components/button/button.component";
 
 @Component({
     selector: "app-sign-in",
