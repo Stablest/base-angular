@@ -1,10 +1,10 @@
 <div class="relative w-full h-full">
     <div class="absolute inset-0 flex justify-center items-center" [class.invisible]="!isLoading"
-        [attr.aria-hidden]="!isLoading" role="status">
+        [attr.aria-hidden]="!isLoading" role="status" data-testid="loading-container">
         <img src="icons/loading.svg" alt="Loading" class="w-6 h-6" />
         <span class="sr-only">Loading...</span>
     </div>
-    <div [class.invisible]="isLoading" [attr.aria-hidden]="isLoading">
+    <div [class.invisible]="isLoading" [attr.aria-hidden]="isLoading" data-testid="content-container">
         <ng-content></ng-content>
     </div>
 </div>
