@@ -1,4 +1,4 @@
-# BaseProject
+# Angular 18 Template
 
 Repositório feito como base para novos projetos.
 
